@@ -2,127 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nil Turon Orra — CV</title>
-  <meta name="description" content="Personal CV website and portfolio." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nil Turón Orra — CV & Portfolio</title>
+  <meta name="description" content="Resume and portfolio of Nil Turón Orra: software engineering student, web developer, and technology enthusiast." />
+  <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="style.css" />
+  <meta property="og:title" content="Nil Turón Orra — CV & Portfolio" />
+  <meta property="og:description" content="Resume, projects and contact information." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.svg" />
+  <meta property="og:url" content="https://your-domain.example" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nil Turón Orra",
+    "jobTitle": "Software Engineering Student / Web Developer",
+    "email": "mailto:nilturonorra@gmail.com",
+    "url": "https://your-domain.example",
+    "sameAs": [
+      "https://github.com/nilturon8",
+      "https://www.linkedin.com/in/yourprofile"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- HEADER -->
   <header class="site-header">
-    <nav class="container nav">
+    <nav class="container nav" aria-label="Primary">
       <a class="brand" href="#">Nil Turón Orra</a>
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle theme">🌓</button>
       <ul class="menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certs">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- HERO / ABOUT -->
     <section id="about" class="section">
       <div class="container grid two">
         <div>
-          <h1>Hello, I'm <span class="accent">Nil  Turon Orra</span></h1>
-          <p>Brief intro: what you study/work on, your focus areas, and what you're seeking (internship, junior role, freelance, etc.). One or two crisp sentences.</p>
-          <p><a class="btn" href="#contact">Contact me</a></p>
+          <h1>Hello, I’m <span class="accent">Nil Turón Orra</span></h1>
+          <p class="lead">First‑year Computer Engineering student (University of Girona) focused on modern, accessible web development. I enjoy teaching, building practical projects, and learning by doing.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Contact me</a>
+            <a class="btn ghost" href="assets/resume.pdf" download>Download résumé (PDF)</a>
+            <button class="btn ghost" id="print">Print to PDF</button>
+          </div>
+          <ul class="quick-meta">
+            <li>Location: Sant Celoni (Barcelona), Spain</li>
+            <li>Age: 18</li>
+            <li>Availability: Open to internships & junior roles</li>
+            <li>Languages: Catalan, Spanish (native); English (B2)</li>
+          </ul>
         </div>
         <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar-placeholder.png" alt="Your portrait" />
+          <img class="avatar" src="assets/avatar-placeholder.svg" alt="Portrait of Nil Turón Orra" />
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills" class="section alt">
       <div class="container">
         <h2>Skills</h2>
         <ul class="skills">
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
+          <li>HTML / CSS (responsive, Grid/Flex)</li>
+          <li>JavaScript (ES6+)</li>
           <li>Git & GitHub</li>
+          <li>Teaching & Mentoring</li>
           <li>Teamwork & Communication</li>
         </ul>
+        <div class="skills-grid">
+          <article class="card">
+            <h3>Web</h3>
+            <p>Semantic HTML, accessible components, mobile‑first layouts, performance mindset.</p>
+          </article>
+          <article class="card">
+            <h3>Tooling</h3>
+            <p>CLI basics, simple build workflows, issue tracking, version control.</p>
+          </article>
+          <article class="card">
+            <h3>Soft Skills</h3>
+            <p>Self‑learner, proactive, patient tutor for ages 14–17.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container">
         <h2>Experience</h2>
-        <article class="card">
-          <h3>Job Title — Company</h3>
-          <p class="muted">2023 — Present · City, Country</p>
-          <p>Short description of responsibilities and achievements. Use action verbs and quantify impact where possible.</p>
-        </article>
-        <article class="card">
-          <h3>Intern — Company</h3>
-          <p class="muted">2022 — 2023 · City, Country</p>
-          <p>What you did, tools/tech used, and any measurable outcomes.</p>
-        </article>
+        <div class="timeline">
+          <article class="tl-item">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-content card">
+              <h3>Private Tutor — Centre Acadèmic Pié (Sant Celoni)</h3>
+              <p class="muted">2024 — Present · Sant Celoni, Spain</p>
+              <ul>
+                <li>Delivered one‑to‑one and small‑group lessons in Mathematics and Technology for students aged 14–17.</li>
+                <li>Prepared exercises and study plans aligned with student goals and timelines.</li>
+                <li>Helped students strengthen problem‑solving skills and exam readiness.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education" class="section alt">
       <div class="container">
         <h2>Education</h2>
         <article class="card">
-          <h3>BSc in Computer Science — University</h3>
-          <p class="muted">2020 — 2024</p>
-          <p>Relevant coursework: Web Development, UX, Data Structures. GPA or distinctions if strong.</p>
+          <h3>BSc in Computer Engineering — University of Girona (UdG)</h3>
+          <p class="muted">Currently enrolled</p>
+          <p>Relevant interests: Web Development, UX fundamentals, Data Structures.</p>
+        </article>
+        <article class="card">
+          <h3>Technological Baccalaureate — IES Baix Montseny</h3>
+          <p class="muted">Sep 2020 — Jun 2022</p>
+          <p>Focused on mathematics, physics, and technology subjects.</p>
         </article>
       </div>
     </section>
 
-    <!-- PROJECTS / PORTFOLIO -->
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
         <div class="grid three">
           <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Project One</a></h3>
+            <h3><a href="#" target="_blank" rel="noopener">Responsive CV Website</a></h3>
             <p class="muted">HTML, CSS, JS</p>
-            <p>One-sentence summary of the goal and what you built.</p>
+            <p>Personal CV site with dark mode, timeline, and print‑ready layout.</p>
           </article>
           <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Project Two</a></h3>
-            <p class="muted">React, API</p>
-            <p>Highlight your role, key features, and impact.</p>
+            <h3><a href="#" target="_blank" rel="noopener">Study Planner</a></h3>
+            <p class="muted">JavaScript</p>
+            <p>Simple task and schedule tracker built to support tutoring sessions.</p>
           </article>
           <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Project Three</a></h3>
-            <p class="muted">Figma, UX</p>
-            <p>Link to a Figma prototype or case study.</p>
+            <h3><a href="#" target="_blank" rel="noopener">Mini Components</a></h3>
+            <p class="muted">HTML, CSS</p>
+            <p>Accessible UI components (buttons, cards, badges) for quick reuse.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
+    <section id="certs" class="section alt">
+      <div class="container">
+        <h2>Certifications & Languages</h2>
+        <ul class="badges">
+          <li>(Add any certificate here)</li>
+        </ul>
+        <h3 class="sub">Languages</h3>
+        <ul class="badges">
+          <li>Catalan — Native</li>
+          <li>Spanish — Native</li>
+          <li>English — B2</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:your@email.com">nilturonorra@gmail.com</a></p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="#" target="_blank" rel="noopener">github.com/nilturon8</a></p>
+        <p>Phone: <a href="tel:+34603405722">+34 603 40 57 22</a></p>
+        <p>Email: <a href="mailto:nilturonorra@gmail.com">nilturonorra@gmail.com</a></p>
+        <p>Address: Carrer Germà Emilià 20, 1-2, Sant Celoni (Barcelona)</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
+        <p>GitHub: <a href="https://github.com/nilturon8" target="_blank" rel="noopener">github.com/nilturon8</a></p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p>© <span id="year"></span> Nil Turón Orra. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const links = document.querySelectorAll('.menu a');
+    links.forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = document.querySelector('.menu a[href="' + id + '"]');
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.menu a').forEach(el => el.classList.remove('active'));
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    document.querySelectorAll('main section[id]').forEach(s => observer.observe(s));
+    document.getElementById('print').addEventListener('click', () => window.print());
+    const toggle = document.getElementById('theme-toggle');
+    const userPref = localStorage.getItem('theme');
+    if (userPref) document.documentElement.dataset.theme = userPref;
+    toggle.addEventListener('click', () => {
+      const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = t;
+      localStorage.setItem('theme', t);
+    });
   </script>
 </body>
 </html>

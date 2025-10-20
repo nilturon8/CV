@@ -1,48 +1,71 @@
-/* ---------- Base ---------- */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background: #f6f7fb;
+/**************** Base ****************/
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+:root{
+  --bg:#f6f7fb; --text:#222; --muted:#667085; --card:#fff; --indigo:#4f46e5; --nav:#0f172a; --chip-bg:#eef2ff; --chip-bd:#c7d2fe; --chip-tx:#3730a3;
+}
+html[data-theme="dark"]{ --bg:#0b1020; --text:#e5e7eb; --muted:#94a3b8; --card:#0f172a; --indigo:#6366f1; --nav:#0b1020; --chip-bg:#1f2a44; --chip-bd:#334155; --chip-tx:#c7d2fe; }
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;color:var(--text);background:var(--bg)}
+.container{width:min(1100px,92%);margin:0 auto}
+.section{padding:4rem 0}
+.section.alt{background:var(--card)}
+.grid{display:grid;gap:1.25rem}
+.grid.two{grid-template-columns:1.3fr 1fr;align-items:center}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border-radius:12px;padding:1.25rem;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.muted{color:var(--muted)}
+.accent{color:var(--indigo)}
+.lead{font-size:1.1rem}
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;border:1px solid transparent;background:var(--indigo);color:#fff;text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(1.05);transform:translateY(-1px);transition:.15s ease}
+.btn.ghost{background:transparent;color:var(--indigo);border-color:var(--indigo)}
+.icon-btn{background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:8px;padding:.45rem .6rem;margin-right:.5rem;cursor:pointer}
+.icon-btn:hover{border-color:#fff}
+.quick-meta{list-style:none;padding:0;margin:1rem 0;display:flex;flex-wrap:wrap;gap:.75rem}
+.quick-meta li{background:var(--chip-bg);color:var(--chip-tx);border:1px solid var(--chip-bd);border-radius:999px;padding:.35rem .6rem;font-weight:600}
+
+/**************** Header/Nav ****************/
+.site-header{position:sticky;top:0;z-index:10;background:var(--nav);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+.brand{color:#fff;font-weight:800;text-decoration:none;letter-spacing:.3px}
+.menu{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.menu a{color:#dbeafe;text-decoration:none;font-weight:600}
+.menu a:hover{color:#fff;text-decoration:underline}
+.menu a.active{color:#fff}
+
+/**************** About ****************/
+.avatar-wrap{display:grid;place-items:center}
+.avatar{width:220px;height:220px;object-fit:cover;border-radius:50%;border:6px solid #e2e8f0;background:#e9efff}
+
+/**************** Skills ****************/
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;padding:0;margin:0;list-style:none}
+.skills li{padding:.5rem .7rem;background:var(--chip-bg);color:var(--chip-tx);border:1px solid var(--chip-bd);border-radius:999px;font-weight:600}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+
+/**************** Timeline ****************/
+.timeline{position:relative;margin-left:.5rem}
+.timeline::before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(var(--indigo),transparent)}
+.tl-item{position:relative;padding-left:2.5rem;margin-bottom:1rem}
+.tl-dot{position:absolute;left:6px;top:.9rem;width:14px;height:14px;background:var(--indigo);border-radius:50%;box-shadow:0 0 0 4px rgba(79,70,229,.15)}
+.tl-content{overflow:hidden}
+
+/**************** Badges ****************/
+.badges{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.badges li{padding:.5rem .7rem;background:var(--chip-bg);border:1px solid var(--chip-bd);border-radius:10px}
+.sub{margin-top:1.25rem}
+
+/**************** Footer ****************/
+.site-footer{background:var(--nav);color:#94a3b8;padding:1.5rem 0;text-align:center}
+
+/**************** Responsive ****************/
+@media (max-width:900px){
+  .grid.two{grid-template-columns:1fr}
+  .grid.three,.skills-grid{grid-template-columns:1fr}
+  .menu{flex-wrap:wrap;gap:.6rem .9rem}
 }
 
-/* ---------- Helpers ---------- */
-.container { width: min(1100px, 92%); margin: 0 auto; }
-.section { padding: 4rem 0; }
-.section.alt { background: #ffffff; }
-.grid { display: grid; gap: 1.25rem; }
-.grid.two { grid-template-columns: 1.3fr 1fr; align-items: center; }
-.grid.three { grid-template-columns: repeat(3, 1fr); }
-.card { background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
-.muted { color: #667085; }
-.accent { color: #4f46e5; } /* Indigo */
-.btn { display: inline-block; padding: .7rem 1rem; border-radius: 10px; border: 1px solid transparent; background: #4f46e5; color: #fff; text-decoration: none; font-weight: 600; }
-.btn:hover { filter: brightness(1.05); transform: translateY(-1px); transition: .15s ease; }
-
-/* ---------- Header/Nav ---------- */
-.site-header { position: sticky; top: 0; z-index: 10; background: #0f172a; color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
-.nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
-.brand { color: #fff; font-weight: 800; text-decoration: none; letter-spacing: .3px; }
-.menu { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
-.menu a { color: #dbeafe; text-decoration: none; font-weight: 600; }
-.menu a:hover { color: #fff; text-decoration: underline; }
-
-/* ---------- About ---------- */
-.avatar-wrap { display: grid; place-items: center; }
-.avatar { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 6px solid #e2e8f0; background: #e9efff; }
-
-/* ---------- Skills ---------- */
-.skills { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; margin: 0; list-style: none; }
-.skills li { padding: .5rem .7rem; background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; border-radius: 999px; font-weight: 600; }
-
-/* ---------- Footer ---------- */
-.site-footer { background: #0f172a; color: #94a3b8; padding: 1.5rem 0; text-align: center; }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  .grid.two { grid-template-columns: 1fr; }
-  .grid.three { grid-template-columns: 1fr; }
-  .menu { flex-wrap: wrap; gap: .6rem .9rem; }
+@media print{
+  header, .btn, .icon-btn, .menu { display:none !important }
+  .card{box-shadow:none}
+  body{background:#fff;color:#000}
 }
