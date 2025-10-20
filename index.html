@@ -37,7 +37,6 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -51,8 +50,6 @@
           <p class="lead">First‑year Computer Engineering student (University of Girona) focused on modern, accessible web development. I enjoy teaching, building practical projects, and learning by doing.</p>
           <div class="actions">
             <a class="btn" href="#contact">Contact me</a>
-            <a class="btn ghost" href="assets/resume.pdf" download>Download résumé (PDF)</a>
-            <button class="btn ghost" id="print">Print to PDF</button>
           </div>
           <ul class="quick-meta">
             <li>Location: Sant Celoni (Barcelona), Spain</li>
@@ -142,29 +139,6 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid three">
-          <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Responsive CV Website</a></h3>
-            <p class="muted">HTML, CSS, JS</p>
-            <p>Personal CV site with dark mode, timeline, and print‑ready layout.</p>
-          </article>
-          <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Study Planner</a></h3>
-            <p class="muted">JavaScript</p>
-            <p>Simple task and schedule tracker built to support tutoring sessions.</p>
-          </article>
-          <article class="card">
-            <h3><a href="#" target="_blank" rel="noopener">Mini Components</a></h3>
-            <p class="muted">HTML, CSS</p>
-            <p>Accessible UI components (buttons, cards, badges) for quick reuse.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
@@ -201,8 +175,7 @@
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
     document.querySelectorAll('main section[id]').forEach(s => observer.observe(s));
-    document.getElementById('print').addEventListener('click', () => window.print());
-    const toggle = document.getElementById('theme-toggle');
+        const toggle = document.getElementById('theme-toggle');
     const userPref = localStorage.getItem('theme');
     if (userPref) document.documentElement.dataset.theme = userPref;
     toggle.addEventListener('click', () => {
