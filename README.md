@@ -1,25 +1,46 @@
-# CV Website Project (EN)
+# Personal CV & Portfolio Website
 
-## 👤 Target Reviewer Persona
-**Name:** Anna — HR Specialist at a tech company. She has limited time to screen résumés and needs key info quickly: education, experience, skills, and projects. The site must be clear, visual, mobile‑friendly, and fast.
+## Overview
+This repository contains the personal CV and portfolio website of **Nil Turón Orra**, a 21-year-old Software Engineering student at the **University of Girona (UdG)**.  
+The website presents education, experience, skills, and contact information in a clean and professional single-page layout.
 
-## 🗂 Information Architecture
-Single‑page layout for quick scanning. The sticky header includes anchor links (About, Skills, Experience, Education, Projects, Certifications, Contact). **About** shows a short intro and a photo. **Skills** uses compact chips. **Experience** and **Education** are cards ordered in reverse chronology, with a vertical timeline. **Projects** is a grid of cards with links to repos/demos. **Certifications** includes badges and a Languages subsection. **Contact** groups email, LinkedIn, and GitHub.
+## Purpose
+The objective of this project is to provide a clear, responsive, and accessible presentation of professional information suitable for academic or job applications.
 
-## 🎨 Visual Design
-Indigo + neutral palette. Dark mode supported (stored in localStorage). System UI font for performance. Cards with rounded corners and subtle shadows create hierarchy. Layout is responsive via CSS Grid; on small screens, columns collapse to one.
+## Structure
+- **index.html** — main page containing all content (About, Skills, Experience, Education, Contact).
+- **style.css** — handles the responsive design, dark/light themes, and layout.
+- **assets/** — includes the profile picture (`avatar.jpg`), Open Graph image (`og-image.svg`), and the downloadable PDF resume (`resume.pdf`).
 
-## 🧰 How to Use
-1. Replace placeholder links (LinkedIn, project URLs) in `index.html`.
-2. Put your headshot in `assets/avatar-placeholder.svg` (or replace with a PNG/JPG).
-3. The Download button points to `assets/resume.pdf` (already included — copied from your uploaded PDF).
-4. Update the Open Graph URL if you deploy to a custom domain.
+## Features
+- Responsive layout using CSS Grid and Flexbox.
+- Dark mode toggle stored via `localStorage`.
+- Smooth scrolling navigation with active link highlighting.
+- Semantic HTML and accessible color contrast.
+- Minimal JavaScript (for theme toggling and navigation behavior).
 
-## 🚀 Deploy
-- **GitHub Pages**: enable Pages on your repo (root) and the site will be served at `https://<username>.github.io/<repo>/`.
+## Technologies Used
+- **HTML5** — structure and semantic content.
+- **CSS3** — responsive design, color themes, and styling.
+- **JavaScript (vanilla)** — light interactivity and user experience improvements.
 
-## ♿ Accessibility
-Semantic headings, visible focus states, color contrast. Smooth scrolling and active link highlight for navigation.
+## How to Run
+1. Download or clone this repository.
+2. Open `index.html` directly in any modern web browser.
+3. To edit personal information, modify the corresponding section inside `index.html`.
 
-## 🔧 Tech Notes
-No frameworks — just HTML, CSS, and a tiny bit of vanilla JS (theme toggle, smooth scroll, print). Structured data (JSON‑LD) is added for better SEO as a Person profile.
+## File Summary
+```
+site_final/
+├── index.html
+├── style.css
+├── README.md
+└── assets/
+    ├── avatar.jpg
+    ├── og-image.svg
+    └── resume.pdf
+```
+
+## License
+This project is released for educational and personal presentation purposes.  
+All content (texts, images, and PDF) belongs to **Nil Turón Orra**.

@@ -7,11 +7,13 @@
   <meta name="description" content="Resume and portfolio of Nil Turón Orra: software engineering student, web developer, and technology enthusiast." />
   <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="style.css" />
+
   <meta property="og:title" content="Nil Turón Orra — CV & Portfolio" />
   <meta property="og:description" content="Resume, projects and contact information." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.svg" />
-  <meta property="og:url" content="https://your-domain.example" />
+  <meta property="og:url" content="https://nilturonorra.github.io" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -19,14 +21,15 @@
     "name": "Nil Turón Orra",
     "jobTitle": "Software Engineering Student / Web Developer",
     "email": "mailto:nilturonorra@gmail.com",
-    "url": "https://your-domain.example",
+    "url": "https://nilturonorra.github.io",
     "sameAs": [
       "https://github.com/nilturon8",
-      "https://www.linkedin.com/in/yourprofile"
+      "https://www.linkedin.com/in/nilturonorra"
     ]
   }
   </script>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="container nav" aria-label="Primary">
@@ -43,11 +46,15 @@
   </header>
 
   <main>
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container grid two">
         <div>
           <h1>Hello, I’m <span class="accent">Nil Turón Orra</span></h1>
-          <p class="lead">First‑year Computer Engineering student (University of Girona) focused on modern, accessible web development. I enjoy teaching, building practical projects, and learning by doing.</p>
+          <p class="lead">
+            Third-year Computer Engineering student (University of Girona) focused on modern, accessible web development.
+            I enjoy teaching, building practical projects, and learning by doing.
+          </p>
           <div class="actions">
             <a class="btn" href="#contact">Contact me</a>
           </div>
@@ -58,24 +65,32 @@
             <li>Languages: Catalan, Spanish (native); English (B2)</li>
           </ul>
         </div>
+
         <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar-placeholder.svg" alt="Portrait of Nil Turón Orra" />
+          <img class="avatar" src="assets/avatar.jpg" alt="Portrait of Nil Turón Orra" />
         </div>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section alt">
       <div class="container">
         <h2>Skills</h2>
-        \1
+        <ul class="skills">
+          <li>HTML / CSS (responsive, Grid/Flex)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Git & GitHub</li>
           <li>C++</li>
           <li>VHDL</li>
           <li>R</li>
-        \2
+          <li>Teamwork & Communication</li>
+          <li>Teaching & Mentoring</li>
+        </ul>
+
         <div class="skills-grid">
           <article class="card">
             <h3>Web</h3>
-            <p>Semantic HTML, accessible components, mobile‑first layouts, performance mindset.</p>
+            <p>Semantic HTML, accessible components, mobile-first layouts, performance mindset.</p>
           </article>
           <article class="card">
             <h3>Tooling</h3>
@@ -83,13 +98,13 @@
           </article>
           <article class="card">
             <h3>Soft Skills</h3>
-            <p>Self‑learner, proactive, patient tutor for ages 14–17.</p>
+            <p>Self-learner, proactive, patient tutor for ages 14–17.</p>
           </article>
         </div>
       </div>
     </section>
 
-    
+    <!-- EXPERIENCE -->
     <section id="experience" class="section">
       <div class="container">
         <h2>Experience</h2>
@@ -100,21 +115,22 @@
               <h3>Cook — Pizzeria Angolo SL (Sant Celoni)</h3>
               <p class="muted">2023 — Present · Sant Celoni, Spain</p>
               <ul>
-                <li>Prepared and delivered high‑quality dishes in a fast‑paced environment, ensuring consistency and hygiene standards.</li>
-                <li>Coordinated with front‑of‑house to manage rush hours and reduce wait times.</li>
+                <li>Prepared and delivered high-quality dishes in a fast-paced environment, ensuring consistency and hygiene standards.</li>
+                <li>Coordinated with front-of-house to manage rush hours and reduce wait times.</li>
                 <li>Maintained inventory and supported onboarding of new staff.</li>
               </ul>
             </div>
           </article>
+
           <article class="tl-item">
             <div class="tl-dot" aria-hidden="true"></div>
             <div class="tl-content card">
               <h3>Private Tutor — Centre Acadèmic Pié (Sant Celoni)</h3>
               <p class="muted">2022 — 2023 · Sant Celoni, Spain</p>
               <ul>
-                <li>Taught Mathematics and Technology to students aged 14–17 in one‑to‑one and small‑group formats.</li>
+                <li>Taught Mathematics and Technology to students aged 14–17 in one-to-one and small-group formats.</li>
                 <li>Created tailored study plans and practice exercises aligned with exams.</li>
-                <li>Improved students’ problem‑solving habits and exam preparation.</li>
+                <li>Improved students’ problem-solving habits and exam preparation.</li>
               </ul>
             </div>
           </article>
@@ -122,15 +138,17 @@
       </div>
     </section>
 
-
+    <!-- EDUCATION -->
     <section id="education" class="section alt">
       <div class="container">
         <h2>Education</h2>
+
         <article class="card">
           <h3>BSc in Computer Engineering — University of Girona (UdG)</h3>
           <p class="muted">Currently enrolled</p>
           <p>Relevant interests: Web Development, UX fundamentals, Data Structures.</p>
         </article>
+
         <article class="card">
           <h3>Technological Baccalaureate — IES Baix Montseny</h3>
           <p class="muted">Sep 2020 — Jun 2022</p>
@@ -139,11 +157,12 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:nilturonorra@gmail.com">nilturonorra@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/nil-turon-orra" target="_blank" rel="noopener">linkedin.com/in/nil-turon-orra</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
         <p>GitHub: <a href="https://github.com/nilturon8" target="_blank" rel="noopener">github.com/nilturon8</a></p>
       </div>
     </section>
@@ -157,6 +176,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     const links = document.querySelectorAll('.menu a');
     links.forEach(a => {
       a.addEventListener('click', e => {
@@ -164,6 +184,7 @@
         document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const id = '#' + entry.target.id;
@@ -174,10 +195,13 @@
         }
       });
     }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
     document.querySelectorAll('main section[id]').forEach(s => observer.observe(s));
-        const toggle = document.getElementById('theme-toggle');
+
+    const toggle = document.getElementById('theme-toggle');
     const userPref = localStorage.getItem('theme');
     if (userPref) document.documentElement.dataset.theme = userPref;
+
     toggle.addEventListener('click', () => {
       const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       document.documentElement.dataset.theme = t;
